@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { images, square, triangle } from 'ionicons/icons';
+import { images, square, triangle, camera, clipboard, notifications, locate, phonePortrait } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -71,20 +71,24 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Network</IonLabel>
           </IonTabButton>
+          <IonTabButton tab="tab2" href="/tab2">
+            <IonIcon aria-hidden="true" icon={camera} />
+            <IonLabel>Photo-Gallery</IonLabel>
+          </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={clipboard} />
             <IonLabel>Clipboard</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab4" href="/tab4">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={notifications} />
             <IonLabel>Notification</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab5" href="/tab5">
-            <IonIcon aria-hidden="true" icon={triangle} />
+            <IonIcon aria-hidden="true" icon={locate} />
             <IonLabel>Geolocalizacion</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab6" href="/tab6">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={phonePortrait} />
             <IonLabel>Device</IonLabel>
           </IonTabButton>
         </IonTabBar>
