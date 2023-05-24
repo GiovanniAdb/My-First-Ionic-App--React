@@ -56,8 +56,8 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon aria-hidden="true" icon={square} />
+            <IonLabel>Network</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={images} />
@@ -65,7 +65,23 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Clipboard</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon aria-hidden="true" icon={square} />
+            <IonLabel>Notification</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab5" href="/tab5">
+            <IonIcon aria-hidden="true" icon={square} />
+            <IonLabel>Geolocalizacion</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab6" href="/tab6">
+            <IonIcon aria-hidden="true" icon={square} />
+            <IonLabel>Device</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab7" href="/tab7">
+            <IonIcon aria-hidden="true" icon={triangle} />
+            <IonLabel>Lector QR</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
