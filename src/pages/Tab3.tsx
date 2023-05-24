@@ -3,10 +3,10 @@ import {
   IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonButton, IonToast
 } from '@ionic/react';
 import { Clipboard } from '@capacitor/clipboard';
-import './Tab4.css';
+import './Tab3.css';
 import { useState } from 'react';
 
-const Tab4: React.FC = () => {
+const Tab3: React.FC = () => {
 
   const [showToast1, setShowToast1] = useState(false);
   const [text, setText] = useState("");
@@ -61,7 +61,7 @@ const Tab4: React.FC = () => {
                       <IonCardContent>
                           <IonItem>
                               <IonTextarea 
-                              placeholder="Put your text here" 
+                              placeholder="Ingresa texto para despues copear :D" 
                               value={text}
                               onIonChange={(e: any) => setText(e.target.value)}
                               ></IonTextarea>
@@ -81,4 +81,4 @@ const Tab4: React.FC = () => {
   );
 };
 
-export default Tab4;
+export default Tab3;

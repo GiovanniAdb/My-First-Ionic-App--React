@@ -4,9 +4,10 @@ import {
 } from '@ionic/react';
 import React, { useState } from 'react';
 import { Toast } from '@capacitor/toast';
-import './Tab5.css';
+import { Dialog } from '@capacitor/dialog';
+import './Tab4.css';
 
-const Tab5: React.FC = () => {
+const Tab4: React.FC = () => {
 
   const [showToast1, setShowToast1] = useState(false);
 
@@ -16,6 +17,46 @@ const Tab5: React.FC = () => {
           duration: "long",
           position: "center",
       });
+  }
+
+  async function showAlert() {
+    await Dialog.alert({
+      title: 'Alert',
+      message: 'This is an alert dialog.',
+      buttonTitle: 'OK'
+    });
+  }
+
+  async function showConfirmation() {
+    const { value } = await Dialog.confirm({
+      title: 'Confirmation',
+      message: 'Are you sure you want to proceed?',
+      cancelButtonTitle: 'Cancel',
+      okButtonTitle: 'OK'
+    });
+
+    if (value) {
+      // El usuario seleccionó "OK"
+    } else {
+      // El usuario seleccionó "Cancel"
+    }
+  }
+
+  async function showPrompt() {
+    const { value } = await Dialog.prompt({
+      title: 'Prompt',
+      message: 'Please enter your name:',
+      cancelButtonTitle: 'Cancel',
+      okButtonTitle: 'OK',
+      inputPlaceholder: 'Your name'
+    });
+
+    if (value) {
+      // El usuario ingresó un valor en el cuadro de diálogo de entrada
+      console.log('Name:', value);
+    } else {
+      // El usuario seleccionó "Cancel" o no ingresó ningún valor
+    }
   }
 
   return (
@@ -50,9 +91,20 @@ const Tab5: React.FC = () => {
                       <IonButton onClick={() => name()} expand="block">Show Toast</IonButton>
                   </IonCardContent>
               </IonCard>
+              <IonCard>
+          <IonCardHeader>
+            <IonCardSubtitle>Plugin</IonCardSubtitle>
+            <IonCardTitle>Toast with Capacitor</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+            <IonButton onClick={showAlert} expand="block">Show Alert</IonButton>
+            <IonButton onClick={showConfirmation} expand="block">Show Confirmation</IonButton>
+            <IonButton onClick={showPrompt} expand="block">Show Prompt</IonButton>
+          </IonCardContent>
+        </IonCard>
           </IonContent>
       </IonPage>
   );
 };
 
-export default Tab5;
+export default Tab4;

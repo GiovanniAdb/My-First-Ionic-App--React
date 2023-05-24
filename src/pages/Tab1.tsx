@@ -56,30 +56,6 @@ const Tab1: React.FC = () => {
           </IonCardContent>
           
         </IonCard>
-        <IonCard>
-          <IonCardHeader>
-            <IonCardSubtitle>Plugin</IonCardSubtitle>
-            <IonCardTitle>Device Details</IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-            <IonButton
-              onClick={() => {
-                logCurrentNetworkStatus();
-              }}
-              expand="block">
-              Show Info</IonButton>
-            <IonAlert
-              isOpen={showAlert1}
-              onDidDismiss={() => setShowAlert1(false)}
-              header={'Your network information is available'}
-              subHeader={''}
-              message={'Connected: ' + connected + ' Type: ' + connectionType.toUpperCase()}
-              buttons={['OK']}
-            />
-            
-          </IonCardContent>
-          
-        </IonCard>
       </IonContent>
     </IonPage>
   );
