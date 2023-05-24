@@ -14,6 +14,10 @@ import { images, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4';
+import Tab5 from './pages/Tab5';
+import Tab6 from './pages/Tab6';
+import Tab7 from './pages/Tab7';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,6 +54,18 @@ const App: React.FC = () => (
           <Route path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/tab4">
+            <Tab4 />
+          </Route>
+          <Route path="/tab5">
+            <Tab5 />
+          </Route>
+          <Route path="/tab6">
+            <Tab6 />
+          </Route>
+          <Route path="/tab7">
+            <Tab7 />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
@@ -58,10 +74,6 @@ const App: React.FC = () => (
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Network</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={images} />
-            <IonLabel>Photos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={square} />
@@ -72,7 +84,7 @@ const App: React.FC = () => (
             <IonLabel>Notification</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab5" href="/tab5">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Geolocalizacion</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab6" href="/tab6">

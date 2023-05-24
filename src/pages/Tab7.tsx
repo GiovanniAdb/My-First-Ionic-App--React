@@ -1,31 +1,12 @@
-import React, { useState } from 'react';
-import QrReader from 'react-qr-reader';
+import React from 'react';
 
-const Tab7: React.FC = () => {
-  const [qrResult, setQrResult] = useState('');
-
-  const handleScan = (result: string | null) => {
-    if (result) {
-      setQrResult(result);
-    }
-  };
-
-  const handleError = (error: any) => {
-    console.log(error);
-  };
-
+const Tab6: React.FC = () => {
   return (
     <div>
-      <h1>Tab 7</h1>
-      <QrReader
-        delay={300}
-        onError={handleError}
-        onScan={handleScan}
-        style={{ width: '100%' }}
-      />
-      <p>Resultado: {qrResult}</p>
+      <h1>Tab 6</h1>
+      <p>This is Tab 6 content.</p>
     </div>
   );
 };
 
-export default Tab7;
+export default Tab6;
